@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>AMoAd SDK for iOS by hashikell</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>AMoAd SDK for iOS</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/hashikell/amoad-ios-sdk/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/hashikell/amoad-ios-sdk/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/hashikell/amoad-ios-sdk" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>:Version: 3.9.5</p>
+
+<h1>
+<a id="amoad-sdk-version-guide-for-ios" class="anchor" href="#amoad-sdk-version-guide-for-ios" aria-hidden="true"><span class="octicon octicon-link"></span></a>AMoAd SDK {version} Guide for iOS</h1>
+
+<p>:numbered:
+:sectnums:</p>
+
+<p>link:<a href="https://github.com/amoad/amoad-ios-sdk/releases/latest%5B%E5%AE%89%E5%AE%9A%E7%89%88%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8%5D">https://github.com/amoad/amoad-ios-sdk/releases/latest[安定版ダウンロードページ]</a> ::
+リリース時は、こちらの使用をお勧めします。 +
+<strong>[NEW] iOS 9のATS (App Transport Security) を抑制する方法について追記しました。必ずご確認ください！（link:Documents/Install/Install.asciidoc[SDKインストールガイド]）</strong></p>
+
+<p>link:<a href="https://github.com/amoad/amoad-ios-sdk/releases#%5B%E6%9C%80%E6%96%B0%E7%89%88%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8%5D">https://github.com/amoad/amoad-ios-sdk/releases#[最新版ダウンロードページ]</a> ::
+開発中のベータ版、アルファ版などが含まれます。</p>
+
+<p>NOTE: WebViewへアドタグを貼る時の実装方法はlink:WebView/guide.md[こちら]をご参照ください。</p>
+
+<h2>
+<a id="概要" class="anchor" href="#%E6%A6%82%E8%A6%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>概要</h2>
+
+<ul>
+<li>link:<a href="https://github.com/amoad/amoad-ios-sdk/releases%5B%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4%5D">https://github.com/amoad/amoad-ios-sdk/releases[更新履歴]</a>
+** AMoAd.hのimportが必須になっています。
+** インタースティシャル（全画面）広告に対応しました（Unityプラグイン、Cocos2d-xモジュール）。
+** ディスプレイ広告がCocos2d-x、Unityに対応しました。</li>
+</ul>
+
+<p>NOTE: AMoAd SDKに関する技術的なお問い合わせ・ご要望は link:<a href="https://github.com/amoad/amoad-ios-sdk/issues%5B%E3%81%93%E3%81%A1%E3%82%89%5D">https://github.com/amoad/amoad-ios-sdk/issues[こちら]</a> 。</p>
+
+<p>== SDKのインストール</p>
+
+<p>link:Documents/Install/Install.asciidoc[SDKインストールガイド]::
+SDK共通のインストール方法</p>
+
+<h2>
+<a id="ディスプレイ広告" class="anchor" href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E5%BA%83%E5%91%8A" aria-hidden="true"><span class="octicon octicon-link"></span></a>ディスプレイ広告</h2>
+
+<h3>
+<a id="インライン広告" class="anchor" href="#%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E5%BA%83%E5%91%8A" aria-hidden="true"><span class="octicon octicon-link"></span></a>インライン広告</h3>
+
+<p>link:Documents/Display/Guide.asciidoc[実装ガイド]::
+実装方法</p>
+
+<p>link:<a href="https://github.com/amoad/amoad-ios-sdk/tree/master/Samples/Display%5B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89%5D">https://github.com/amoad/amoad-ios-sdk/tree/master/Samples/Display[サンプルコード]</a>::
+管理画面から取得したsidを入力して動かしてください</p>
+
+<p>=== インタースティシャル（全画面）広告</p>
+
+<p>link:Documents/Display/Interstitial.asciidoc[実装ガイド]::
+実装方法</p>
+
+<p>link:../Samples/DisplayInterstitial[サンプルコード]::
+管理画面から取得したsidを入力して動かしてください</p>
+
+<p>== ネイティブ広告</p>
+
+<p>=== ネイティブApp</p>
+
+<p>link:Documents/Native/Overview_nativeApp.asciidoc[概要]::
+ネイティブApp広告は、広告クリエイティブを任意のレイアウトで表示することができる商品です</p>
+
+<p>link:Documents/Native/Guide_nativeApp.asciidoc[実装ガイド]::
+AMoAd SDKでは、ネイティブApp広告を簡単に表示するAPIを提供しています</p>
+
+<p>=== リストビュー</p>
+
+<p>link:Documents/Native/Overview_listView.asciidoc[概要]::
+ネイティブApp広告は、広告クリエイティブをリストビュー（UITableView）に、任意のレイアウトで表示することができる商品です</p>
+
+<p>link:Documents/Native/Guide_listView.asciidoc[実装ガイド]::
+AMoAd SDKでは、リストビュー広告を簡単に表示するAPIを提供しています</p>
+
+<p>=== プリロール
+link:Documents/Native/Overview_preroll.asciidoc[概要]::
+マンガアプリなどで、コンテンツの前後に入れる広告です。</p>
+
+<p>link:Documents/Native/Guide_preroll.asciidoc[実装ガイド]::
+AMoAd SDKでは、プリロール広告を簡単に表示するAPIを提供しています</p>
+
+<p>link:Samples/NativePreRoll/AMoAdNativePreRoll[サンプルコード]::
+管理画面から取得したsidを入力して動かしてください</p>
+
+<p>=== ネイティブ広告（共通）</p>
+
+<p>link:<a href="https://rawgit.com/amoad/amoad-ios-sdk/master/Documents/Native/appledoc/index.html%5BAPI%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%5D">https://rawgit.com/amoad/amoad-ios-sdk/master/Documents/Native/appledoc/index.html[APIリファレンス]</a>::
+AppleDocドキュメント</p>
+
+<p>link:<a href="https://github.com/amoad/amoad-ios-sdk/tree/master/Samples/Native%5B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89%5D">https://github.com/amoad/amoad-ios-sdk/tree/master/Samples/Native[サンプルコード]</a>:: ネイティブ広告の種類に応じたサンプルコードに、管理画面から取得したsidを入力して動かしてください</p>
+
+<p>== インタースティシャル（全画面）広告
+link:Documents/Interstitial/Guide.asciidoc[概要]::
+インタースティシャル（全画面）広告とは、AMoAdネットワークのレクタングル広告（300x250）をカスタマイズ可能なパネルに乗せて全画面表示させる機能です</p>
+
+<p>NOTE: Unityプラグイン、Cocos2d-xモジュールに対応しています</p>
+
+<p>== プラグインなど
+=== Unityプラグイン</p>
+
+<p>link:Documents/UnityPlugin/Guide.asciidoc[導入ガイド]::
+プラグインの適用手順とビルド方法について説明します</p>
+
+<p>link:Documents/UnityPlugin/Display.asciidoc[インライン広告 実装ガイド]::
+インライン広告の実装方法とサンプルコードの使い方について説明します</p>
+
+<p>link:Documents/UnityPlugin/Interstitial.asciidoc[インタースティシャル（全画面）広告 実装ガイド]::
+インタースティシャル（全画面）広告の実装方法とサンプルコードの使い方について説明します</p>
+
+<p>=== Cocos2d-xモジュール
+link:Documents/Cocos2dxModule/Guide.asciidoc[導入ガイド]::
+モジュールの適用手順とビルド方法について説明します</p>
+
+<p>link:Documents/Cocos2dxModule/Display.asciidoc[インライン広告 実装ガイド]::
+インライン広告の実装方法について説明します</p>
+
+<p>link:Documents/Cocos2dxModule/Interstitial.asciidoc[インタースティシャル（全画面）広告 実装ガイド]::
+インタースティシャル（全画面）広告の実装方法について説明します</p>
+
+<p>=== AdMobメディエーション アダプタ</p>
+
+<p>link:Documents/AdMobMediation/AdMobSetup.asciidoc[導入ガイド]::
+アダプタの導入方法とAdMobメディエーションの設定についてのガイドです</p>
+
+<p><a href="https://github.com/amoad/amoad-ios-sdk/raw/master/AdMobMediation/libAMoAdGmAdapter.a%5B%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%5D">https://github.com/amoad/amoad-ios-sdk/raw/master/AdMobMediation/libAMoAdGmAdapter.a[アダプタのダウンロード]</a>::
+最新版のアダプタはこちらからダウンロードできます</p>
+        </section>
+
+        <footer>
+          AMoAd SDK for iOS is maintained by <a href="https://github.com/hashikell">hashikell</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
